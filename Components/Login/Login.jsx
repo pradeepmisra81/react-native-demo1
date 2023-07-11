@@ -6,16 +6,23 @@ import {
   TextInput,
   TouchableOpacity,
 } from "react-native";
+import tw from 'tailwind-react-native-classnames';
 
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   return (
+    // <View style={tw`flex items-center justify-center h-screen`}>
+    //   <Text style={tw`text-lg font-bold text-blue-500`}>Hello, Tailwind!</Text>
+    // </View>
     <View style={loginStyles.container}>
+      <View style={tw`flex items-center justify-center`}>
+       <Text style={tw`text-lg font-bold text-blue-500`}>Hello, Tailwind!</Text>
+    </View> 
       <View style={loginStyles.inputView}>
         <TextInput
           style={loginStyles.TextInput}
-          placeholder="Email."
+          placeholder="Email.........."
           placeholderTextColor="#003f5c"
           onChangeText={(email) => setEmail(email)}
         /> 
